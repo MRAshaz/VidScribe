@@ -23,7 +23,7 @@ const SearchBar = ({ onTranscriptReceived }: SearchBarProps) => {
       // encodeURIComponent ensures special characters like ? and = in the URL don't break the API call
       const encodedUrl = encodeURIComponent(videoUrl.trim());
       
-      const response = await fetch(`http://127.0.0.1:8000/transcript/${encodedUrl}`);
+      const response = await fetch(`https://vidscribebackend.onrender.com/transcript/${encodedUrl}`);
       
       if (!response.ok) {
         throw new Error(`Server responded with ${response.status}`);
